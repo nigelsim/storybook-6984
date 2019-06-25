@@ -1,0 +1,142 @@
+
+.widget {
+	background-color: $color-white;
+	box-shadow: 0 .2rem .4rem 0 rgba(0, 0, 0, .5);
+	border-radius: 0;
+	border: none;
+	border-bottom: .1rem solid rgba(155, 155, 155, .1);
+	margin: .5rem 0;
+
+	.panel-heading {
+		border-radius: 0;
+		border-bottom: 0;
+		padding: 1.25rem 2.5rem;
+		margin-bottom: 0;
+		color: $color-white;
+		font-family: $font-family-primary;
+		font-size: 2.2rem;
+		font-weight: 600;
+		line-height: 2.2rem;
+	}
+
+	&.panel {
+		padding: 0;
+		margin-bottom: 4rem;
+	}
+
+	.panel-heading {
+		background-color: $bg-default-widget;
+	}
+
+	&.missions .panel-heading {
+		background-color: $bg-mission-widget;
+	}
+
+	&.craft .panel-heading,
+	&.craft-models .panel-heading {
+		background-color: $bg-craft-widget;
+	}
+
+	&.pilot .panel-heading {
+		background-color: $bg-pilot-widget;
+	}
+
+	&.equipment .panel-heading {
+		background-color: $bg-equipment-widget;
+	}
+
+	&.battery .panel-heading {
+		background-color: $bg-battery-widget;
+	}
+
+	&.battery-set .panel-heading {
+		background-color: $bg-batteryset-widget;
+	}
+
+	&.maintenance .panel-heading {
+		background-color: $bg-maintenance-widget;
+	}
+
+	&.locations .panel-heading {
+		background-color: $bg-location-widget;
+	}
+
+	&.utilities .panel-heading {
+		background-color: $bg-utilities-widget;
+	}
+
+	&.upgrade .panel-heading {
+		background-color: $brand-primary;
+	}
+
+	.btn-title-action {
+		color: $color-white;
+	}
+
+	.btn-title-action:hover {
+		color: black;
+	}
+}
+
+.modal-header {
+
+	background-color: $bg-default-widget;
+
+	.vertical-align {
+	    display: flex;
+	    align-items: center;
+	}
+
+	.modal-title {
+		color: #fff;
+	}
+
+	&.missions {
+		background-color: $bg-mission-widget;
+	}
+
+	&.craft, &.craft-models {
+		background-color: $bg-craft-widget;
+	}
+
+	&.pilot {
+		background-color: $bg-pilot-widget;
+	}
+
+	&.battery {
+		background-color: $bg-battery-widget;
+	}
+
+	&.battery-set {
+		background-color: $bg-batteryset-widget;
+	}
+
+	&.maintenance {
+		background-color: $bg-maintenance-widget;
+	}
+
+	&.locations {
+		background-color: $bg-location-widget;
+	}
+
+	&.utilities {
+		background-color: $bg-utilities-widget;
+	}
+
+	&.upgrade {
+		background-color: $brand-primary;
+	}
+}
+
+.panel-heading .form-inline {
+	margin-top: -.7rem;
+	margin-right: -2.2rem;
+}
+
+.panel-heading .form-inline .btn-link {
+	padding: .3rem 2rem;
+}
+
+.panel-heading .form-inline label{
+	font-size: 80%;
+}

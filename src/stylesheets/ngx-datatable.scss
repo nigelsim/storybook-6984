@@ -1,0 +1,12 @@
+// We already import a bootstrap theme. This just improves the header handling
+.ngx-datatable.bootstrap {
+    .datatable-header-cell-wrapper {
+        display: block;
+        .datatable-header-cell-label {
+            display: block;
+            word-wrap: normal;
+            white-space: normal; 
+            font-weight: bold;
+        }
+    }
+}

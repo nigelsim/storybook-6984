@@ -1,0 +1,114 @@
+
+.sort-desc-indicator, .sort-asc-indicator {
+	display: none;
+}
+
+.st-sort-descent > .sort-desc-indicator {
+	display: inline;
+}
+
+.st-sort-ascent > .sort-asc-indicator {
+	display: inline;
+}
+
+.st-sort-descent > .sort-unsorted-indicator {
+	display: none;
+}
+
+.st-sort-ascent > .sort-unsorted-indicator {
+	display: none;
+}
+
+flyfreely-table {
+	display: block;
+	overflow-x: auto;
+}
+
+flyfreely-table th {
+	cursor: pointer;
+}
+
+flyfreely-table td .btn-link {
+	padding: 0;
+	border: 0;
+}
+
+// This will give table horizontal scroll and a space for last column on table.
+.table-container {
+	width: auto;
+    overflow-x:scroll;
+    margin-right:3.5em;
+    overflow-y:visible;
+    padding-bottom:1px;
+}
+
+.ai-table {
+	width: 100%;
+    max-width: 100%;
+	border: none;
+
+	tbody>tr>td {
+		 &:last-child {
+			 right: 30px;
+		     background: #ffffff;
+		     position: absolute;
+		     display: inline-block;
+		 }
+	}
+
+	// If you want a column to be fixed, add this to th and td.
+	.fixed-column {
+		right: 20px;
+		top: 90px;
+		background: #ffffff;
+		position: absolute;
+		height: 37px;
+	}
+
+	thead th {
+		border-bottom: 0.5px solid #f5f5f5;
+		padding: 1px;
+
+		&:last-child {
+			border-bottom: none;
+		}
+	}
+
+	td,
+	th {
+		@include fontStyle($color-tundora, $font-size-base, $fontSemi, 16px);
+		border-top: none;
+		padding: 5px;
+		overflow: hidden;
+		text-align: center;
+		position: relative;
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	td {
+		font-weight: 400;
+	}
+	.fa-circle {
+		color: $color-torch-red;
+		padding-right: 5px;
+	}
+	.glyphicon-option-horizontal {
+		color: #000;
+	}
+}
+
+.table > thead > tr > th, .table > tbody > tr > td {
+	vertical-align: middle;
+}
+
+/**
+ * This type of table is used just for layout, not displaying tabular data
+ */
+.layout-table {
+	width: 100%;
+
+	td, th {
+		padding: 8px;
+	}
+}

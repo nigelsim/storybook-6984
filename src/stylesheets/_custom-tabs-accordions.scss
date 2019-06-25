@@ -1,0 +1,45 @@
+
+.tab-set-vertical {
+	display: flex;
+
+	.tab-content {
+		padding-left: 20px;
+		width: 100%;
+	}
+
+	.uib-tab, .nav-item {
+		min-width: 200px;
+		text-align: center;
+	}
+}
+
+.tab-pane {
+    min-height: 100%;
+}
+
+uib-accordion .panel {
+	border-color: $brand-primary;
+	background-color: $white;
+
+	.panel-title {
+		color: $brand-primary;
+	}
+}
+
+uib-accordion.inline-section {
+	.panel-title {
+		font-size: $font-size-base;
+		font-weight: $fontNormal;
+	}
+}
+
+uib-accordion {
+	h5 {
+		padding: 20px 15px;
+		color: $color-lochmara;
+		font-family: "Lato", sans-serif;
+		font-size: 17px;
+		line-height: 22.5px;
+		// display: inline-flex;
+	}
+}

@@ -1,0 +1,16 @@
+@mixin bg($bg: $color-white){
+	background-color: $bg;
+}
+
+@mixin fontStyle($color,$fontSize,$fontweight,$lineHeight){
+	color: $color;
+	font-family: $default-font-family;
+	font-size: $fontSize;
+	font-weight: $fontweight;
+	line-height: $lineHeight;
+
+	&.disabled,
+	&[disabled] {
+		color: lighten($color, 30%);
+	}
+}

@@ -1,0 +1,23 @@
+.btn.ui-select-toggle {
+    border-radius: 0;
+    border: 1px solid $color-comet-light;
+    color: $text-color;
+    padding: $padding-base-vertical $padding-base-horizontal;
+}
+
+.editable-wrap {
+    display: block;
+
+    &.form-inline {
+        display: inline-block;
+    }
+}
+
+.editable-wrap .editable-input {
+    white-space: nowrap;
+    display: block;
+}
+
+.editable-wrap.form-inline .editable-input, .form-inline .editable-wrap, .form-inline .editable-input {
+    display: inline-block;
+}

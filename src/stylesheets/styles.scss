@@ -1,0 +1,19 @@
+@import "mixins/custom";
+@import "custom-variables";
+@import "bootstrap";
+@import "~ui-select/dist/select.min.css";
+@import "~@ng-select/ng-select/themes/default.theme.css";
+// @import "~angular-xeditable/dist/css/xeditable.css";
+@import "~textangular/dist/textAngular.css";
+@import "ui-select-fixup";
+@import "custom";
+@import "ngx-toastr-bs3";
+@import '../../node_modules/angular-tree-component/dist/angular-tree-component.css';
+
+@import '~mapbox-gl/dist/mapbox-gl.css';
+@import '~@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css';
+@import '~@mapbox/mapbox-gl-geocoder/dist/mapbox-gl-geocoder.css';
+
+@import '~@swimlane/ngx-datatable/release/index.css';
+@import '~@swimlane/ngx-datatable/release/themes/bootstrap.css';
+@import '~@swimlane/ngx-datatable/release/assets/icons.css';

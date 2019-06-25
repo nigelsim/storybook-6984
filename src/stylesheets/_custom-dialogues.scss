@@ -1,0 +1,62 @@
+
+/* These values are measured for use in this file, they do not affect the actual modals*/
+$modal-header-height: 38px + 2 * $modal-title-padding;
+$modal-footer-height: 43px + 2 * $modal-title-padding;
+$modal-margin: 40px;
+$modal-with-footer-content-height: $modal-header-height + $modal-footer-height + $modal-margin * 2;
+$modal-without-footer-content-height: $modal-header-height + $modal-margin * 2;
+$modal-lg-min-height: 410px;
+
+// Make sure headers/footers observe the border radius.
+.modal-content {
+    overflow: hidden;
+}
+
+.modal {
+    background-color: rgba(89,89,116,0.7);
+}
+
+.modal-header {
+    max-height: $modal-header-height;
+}
+
+.modal-body {
+    overflow-y: auto;
+    overflow-x: hidden; /* I've done this to avoid dialogues to be horizontal scrollable */
+    max-height: calc(100vh - #{$modal-with-footer-content-height});
+    
+    &.no-footer, &.inner-container {
+        max-height: calc(100vh - #{$modal-without-footer-content-height});
+        .modal-body-content {
+            max-height: calc(100vh - #{$modal-without-footer-content-height  + $modal-inner-padding * 2});
+        }
+    }
+    &.inner-container-and-footer {
+        max-height: calc(100vh - #{$modal-with-footer-content-height});
+        .modal-body-content {
+            max-height: calc(100vh - #{$modal-with-footer-content-height  + $modal-inner-padding * 2});
+        }
+    }
+    &.inner-container, &.inner-container-and-footer {
+        overflow-y: hidden;
+    }
+}
+
+.modal-body-content {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-dialog.modal-lg {
+    .modal-body {
+        min-height: $modal-lg-min-height;
+        .modal-body-content {
+            min-height: #{$modal-lg-min-height};
+        }
+    }
+}
+
+.dropdown-menu.modal-dropdown, .uib-datepicker-popup, body > .ui-select-bootstrap.open {
+    z-index: #{$zindex-modal * 2};
+}

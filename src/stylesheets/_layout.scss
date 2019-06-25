@@ -1,0 +1,445 @@
+$sidebar-bg: #333;
+$sidebar-lv1-bg: $sidebar-bg;//lighten(#272727, 10%);
+
+$sidebar-title-bg: #3a3a3a;
+$sidebar-hover-bg: #222;
+
+.sidebar {
+	@include bg(#383838);
+}
+
+.main-content {
+	margin-top: 20px;
+	overflow: hidden;
+
+	ui-view {
+		overflow: auto;
+	}
+
+    @media (min-width: $screen-xs-min) {
+    }
+    @media (min-width: $screen-sm-min) {
+        //margin-left: $sidebar-width;
+	}
+}
+
+flyfreely-admin .main-content, style-guide .main-content {
+	@media (min-width: $screen-sm-min) {
+        margin-left: $sidebar-width;
+	}
+}
+
+workspace {
+	display: flex;
+	margin-bottom: 100px;
+}
+
+.sidebar.sidebar-right {
+    border-radius: 0px 0px 0px 6px;
+}
+
+.sidebar {
+	height: 100vh;
+
+	.navbar-default {
+		background-color: $sidebar-bg;
+	}
+
+	&.active .btn-navbar-toggle {
+		text-align: center;
+	}
+
+	.btn-navbar-toggle {
+		text-align: right;
+		button {
+			color: $color-white;
+			border: none;
+
+			&:focus {
+				color: $color-white;
+				&:hover {
+					color: $color-primary;
+				}
+			}
+		}
+	}
+
+	.ui-select-bootstrap .btn.ui-select-toggle, .ui-select-search {
+		background-color: $sidebar-title-bg;
+		color: $color-white;
+		text-indent: 10px;
+		border: none;
+	}
+
+	nav {
+		margin: 0px;
+		position: relative;
+		padding-bottom: $power-by-height;
+		min-height: 100%;
+	}
+
+	.sidebar-logo {
+		line-height: 100px;
+
+		img.logo-image {
+			max-height: 65px;
+		}
+	}
+
+	.powered-by {
+		width: $sidebar-width - 20px;
+		position: absolute;
+		bottom: 0px;
+		padding: 10px;
+		height: $power-by-height;
+
+		a {
+			@include fontStyle(#9B9B9B, 10px, 600, 12px);
+		}
+
+		.power-by-logo {
+			max-height: 40px;
+			float: right;
+		}
+
+		.power-by-logo-sm {
+			display: none;
+			max-height: 40px;
+			margin-left: 13px;
+		}
+	}
+
+	.navbar-btn {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+
+	.admin-sidebar-user-wrapper {
+		padding: 25px;
+		background-color: #383838;
+
+		.admin-user-link {
+			display: inline-block;
+			font-size: 12px;
+		}
+	}
+
+	.nav-icon {
+
+		padding-right: 5px;
+
+		&.active {
+			display: none;
+		}
+	}
+
+	.nav li .nav-link {
+		@include fontStyle($color-white,16px,$fontNormal,18px);
+		padding: 10px;
+		padding-left: 25px;
+		display: block;
+		border-left: 4px solid $transparent;
+		border-right: 5px solid $transparent;
+		// border-bottom: 0.5px solid #f5f5f5;
+
+		&.dropdown-item {
+			padding: 0px;
+			font-size: 12px;
+		}
+
+		&.active,
+		&:hover {
+			@include fontStyle($color-primary,16px,$fontNormal,18px);
+			color: $color-primary;
+			background-color: $sidebar-hover-bg;
+
+			.nav-icon {
+				display: none;
+
+				&.active {
+					display: inline-block;
+				}
+			}
+
+			.glyphicon.nav-icon {
+				display: inline;
+				color: $color-primary;
+			}
+		}
+
+		.glyphicon.nav-icon {
+			color: $color-comet-dark;
+		}
+		.nav li .nav-link .glyphicon.nav-icon {
+			color: $color-comet-dark;
+		}
+
+		&.edit-icon {
+			// color: $9b;
+			border-left: none;
+			border-bottom: none;
+			padding-bottom: 0;
+			text-align: right;
+		}
+		.logo-text {
+			@include fontStyle($color-tundora,16px,$fontBold,19px);
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+		.logo-img {
+			max-width: 100%;
+			min-height: 50px;
+			margin-bottom: 20px;
+		}
+	}
+
+	.nav.subnav li .nav-link {
+		@include fontStyle($color-white,15px,$fontNormal,19px);
+		padding: 10px 10px 10px 50px;
+		display: block;
+		background-color: $sidebar-lv1-bg;
+		// border-bottom: 0.5px solid #f5f5f5;
+
+		&.active,
+		&:hover {
+			@include fontStyle($color-primary,15px,$fontNormal,19px);
+			color: $color-primary;
+			background-color: $sidebar-hover-bg;
+		}
+	}
+
+	/** Make labels on check boxes show as pointers */
+	label.nav-link {
+		cursor: pointer;
+	}
+
+	.nav li .nav-title {
+		// background-color: $sidebar-title-bg;
+		text-align: center;
+		text-decoration: underline;
+
+		@include fontStyle($color-white, $font-size-base, $fontNormal, 19px);
+		padding: 10px;
+		display: block;
+
+		&.dropdown-item {
+			padding: 0px;
+			font-size: 12px;
+		}
+	}
+
+	.nav-heading {
+		border-bottom: 1px solid;
+	}
+
+	.navbar-default .navbar-brand {
+		padding: 5px;
+		background-color: $color-white;
+	}
+
+	.navbar-default .navbar-brand img {
+		max-width: none;
+		max-height: $navbar-height - 10px;
+	}
+
+	.route-nav .nav-item, .route-nav .nav-item.nav-title {
+		display: none;
+	}
+
+	.route-nav.on-route {
+		.route-link {
+			display: none;
+		}
+
+		.nav-item, .nav-item.nav-title {
+			display: block;
+		}
+	}
+
+	.name {
+		cursor: pointer;
+	}
+
+	/* Collapsed side nav */
+	&.active {
+		$sidebar-width: 80px;
+		min-width: 80px;
+		max-width: 80px;
+		text-align: center;
+
+		ul li a {
+			padding: 20px 10px;
+			text-align: center;
+			font-size: 0.85em;
+		}
+
+		.block-when-collapsed {
+			display: block;
+		}
+
+		.nav-item label span.name, .nav-item span span.name, .nav-item a span.name,
+		.nav-item .nav-title, .nav-item .nav-item.nav-title, .hide-when-collapsed  {
+			display: none;
+		}
+
+		.nav li .nav-link {
+			padding-left: 10px;
+		}
+
+		.nav-item {
+			display: none;
+		}
+
+		.powered-by {
+			padding: 10px;
+			width: 60px;
+		}
+	}
+
+	background: #383838;
+	width: 100%;
+	box-shadow: 2px 0px 5px $color-comet-dark;
+
+	@media (min-width: $screen-sm-min) {
+		width: 250px;
+		position: fixed;
+		top: 0;
+		left: 0;
+		overflow-y: auto;
+		overflow-x: hidden;
+	}
+}
+
+//  COLLAPSIBLE MENU
+
+
+/* Shrinking the sidebar from 250px to 80px and center aligining its content*/
+flyfreely-sidebar {
+	min-width: $sidebar-width;
+	max-width: $sidebar-width;
+
+}
+flyfreely-sidebar.active {
+	min-width: 80px;
+	max-width: 80px;
+}
+
+#sidebarCollapse i {
+    transform: none;
+}
+
+#sidebarCollapse.active i {
+	transform: rotate(-45deg) translate(1px, -1px);
+}
+
+#sidebar.active ul li a i {
+    margin-right:  0;
+    display: block;
+    font-size: 1.8em;
+    margin-bottom: 5px;
+}
+
+/* Same dropdown links padding*/
+#sidebar.active ul ul a {
+    padding: 10px !important;
+}
+
+/* Changing the arrow position to bottom center position,
+   translateX(50%) works with right: 50%
+   to accurately  center the arrow */
+#sidebar.active a[aria-expanded="false"]::before, #sidebar.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+
+.nav > li > a > img {
+	max-height: 22px;
+}
+
+.footer {
+	position: fixed;
+	background-color: $color-white;
+	bottom: 0;
+  	/* Set the fixed height of the footer here */
+  	height: 60px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.sidebar .organisation-logo organisation-logo {
+	width: 40%;
+    margin: 10px 30% 10px 30%;
+}
+
+.container-scroll {
+	overflow-y: auto;
+		
+	& > :first-child {
+		width: 100%;
+	}
+}
+
+.container-with-footer {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+
+	& > :first-child {
+		flex: 1;
+		overflow-y: auto;
+		width: 100%;
+		// https://moduscreate.com/blog/how-to-fix-overflow-issues-in-css-flex-layouts/
+		min-height: 0;
+	}
+}
+
+.vertical-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.horizontal-container {
+	display: flex;
+	flex-direction: row;
+}
+
+.fill {
+	flex: 1;
+}
+
+.within-parent {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.container-padding {
+	padding-left: ($grid-gutter-width/2);
+	padding-right: ($grid-gutter-width/2);
+}
+
+.align-center {
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
+
+.top-buffer {
+	margin-top: 10px;
+}
+
+.left-buffer {
+	margin-left: 5px;
+}
+
+.micro-buffer {
+	margin-top: 5px;
+
+	@media (min-width: 768px) {
+		margin-top: 0;
+	}
+}

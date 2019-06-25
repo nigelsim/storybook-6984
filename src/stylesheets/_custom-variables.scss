@@ -1,0 +1,126 @@
+// FLYFREELY COLOR PALETTES
+
+$color-mine-shaft: #333030;
+$color-mercury: #e8e8e8;
+$color-comet-dark: #595974;
+$color-comet: lighten($color-comet-dark, 15%);
+$color-comet-light: lighten($color-comet-dark, 30%);
+$color-ghost: #cacad8;
+$color-white: #fff;
+$color-gallery: #eee;
+$color-ocean-green: #42b983;
+$color-pomegranate: #F44336;
+$color-cornflower-blue: #4a7ad3;
+$color-mischka: #d5d5dc;
+$color-tundora: #4A4A4A;
+$color-torch-red: #FF1721;
+$color-lima: #7ED321;
+$color-seagull: #6BBDE9;
+$color-viking: #5BD3D5;
+$color-buttercup: #F5A623;
+$color-alabaster: #fafafa;
+$color-polar: #F4FAFD;
+$color-salmon: #FF936B;
+$color-goldenrod: #FFD96B;
+$color-blue-marguerite: #6669CB;
+$color-coral: #FF8558;
+$color-caribbean-green: #00de7a;
+$color-lochmara: #007DD5;
+$color-yellow-orange: #ffa83d;
+$color-sunset-orange: #ff4d4f;
+
+$transparent: transparent;
+
+// FLYFREELY COLOR BASE
+
+$color-primary: $color-lochmara;
+$color-success: $color-caribbean-green;
+$color-warning: $color-yellow-orange;
+$color-danger: $color-sunset-orange;
+$color-white-2: #fefefe; // TODO try to remove this white
+
+$body-bg: lighten($color-comet-dark, 30%);
+
+// FLYFREELY WIDGET COLOR PALETTES
+
+$bg-default-widget: $color-tundora;
+$bg-mission-widget: $color-viking;
+$bg-craft-widget: $color-seagull;
+$bg-pilot-widget: $color-buttercup;
+$bg-battery-widget: $color-salmon;
+$bg-batteryset-widget: $color-goldenrod;
+$bg-maintenance-widget: $color-blue-marguerite;
+$bg-equipment-widget: $color-caribbean-green;
+$bg-location-widget: $color-coral;
+$bg-utilities-widget: $color-caribbean-green;
+
+// FLYFREELY FONTS
+
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,400i,500,700');
+
+$font-family-primary: 'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-secundary: 'Montserrat', sans-serif;
+$text-color: $color-comet-dark;
+$default-font-family: 'Lato', sans-serif;
+
+// FLYFREELY OTHER TODO remove
+
+$power-by-height: 90px;
+$ls_1: 1px;
+
+// FLYFREELY SIDEBAR
+
+$sidebar-width: 250px;
+
+// FLYFREELY FONT WEIGHT
+
+$fontLight: 300;
+$fontNormal: 400;
+$fontSemi: 600;
+$fontBold: 700;
+
+// FLYFREELY INPUT
+
+$input-border: $color-mischka;
+$input-border-radius: 60px;
+
+// BOOTSTRAP FONTS
+
+$font-size-base: 14px;
+$font-size-h1: floor(($font-size-base * 2));
+$font-size-h2: floor(($font-size-base * 1.25));
+$font-size-h3: $font-size-base;
+
+// BOOTSTRAP COLOR PALETTES (OVERRIDE)
+
+$brand-primary: $color-primary !default;
+$brand-success: $color-success !default;
+$brand-warning: $color-warning !default;
+$brand-danger: $color-danger !default;
+$white: $color-white !default;
+$label-default-bg: $color-comet-dark !default;
+$well-bg: $color-white;
+
+$well-border: 0 !default;
+$popover-max-width: 500px !default;
+$headings-color: $color-comet-dark;
+
+// BOOTSTRAP MODALS
+
+$modal-inner-padding: 25px;
+$modal-title-padding: 25px;
+$modal-content-border-color: 0;
+$modal-content-fallback-border-color: 0;
+$modal-backdrop-bg: $color-comet-dark;
+$modal-backdrop-opacity: .85;
+$modal-lg: 90% !default;
+
+// BOOTSTRAP NAVBAB
+
+$navbar-height: 70px;
+$navbar-default-link-color: $color-comet-dark;
+$navbar-default-link-hover-color: $color-primary;
+$navbar-default-link-hover-bg: $color-gallery;
+$navbar-default-link-active-color: $color-primary;
+$navbar-default-link-active-bg: $color-gallery;
+$nav-tabs-active-link-hover-bg: $color-white-2;

@@ -1,0 +1,208 @@
+/*** Style for Login & Signup Page ***/
+@mixin fontStyleFront($color, $fontSize, $fontweight, $lineHeight){
+	color: $color;
+	font-family: $font-family-secundary;
+	font-size: $fontSize;
+	font-weight: $fontweight;
+	line-height: $lineHeight;
+
+	&.disabled,
+	&[disabled] {
+		color: lighten($color, 30%);
+	}
+}
+
+.first-page {
+
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 75%;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    justify-content: right;
+
+    &.login {
+      background-image: url('images/login-background.jpg');
+    }
+
+    &.signup {
+      background-image: url('images/signup-background.jpg');
+    }
+
+    &.error {
+      background-image: url('images/signup-background.jpg');
+
+      .jumbotron {
+          border-radius: 1.5rem;
+          background: #ffffff99;
+          margin: 0 auto;
+      }
+    }
+
+    /* make the main content the full width */
+    .main-content {
+      margin: 0;
+      width: 100vw;
+    }
+
+	footer {
+		bottom: 0;
+		position: absolute;
+		width: 100%;
+		display: block;
+	}
+}
+
+:focus {
+	outline: none;
+}
+
+.input-control {
+    background: $color-mercury;
+    border: 1px solid $color-mercury;
+    border-radius: .5rem;
+    color: $color-mine-shaft;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    padding-left: 1.5rem;
+    transform: skewX(-15deg);
+    -webkit-transform: perspective(15rem) rotateX(-15deg);
+    -o-transform: perspective(30rem) rotateX(-30deg);
+    -moz-transform: perspective(30rem) rotateX(-30deg);
+    -webkit-transform-origin: 0% 15%;
+    -moz-transform-origin: 0% 15%;
+    -o-transform-origin: 0% 15%;
+    transform-origin: 0% 15%;
+    max-width: 32rem;
+    width: 100%;
+    height: 4.5rem;
+
+    &:placeholder {
+        color: $color-mine-shaft;
+        font-family: Montserrat, sans-serif;
+        font-size: 1.6rem;
+        font-weight: 300;
+    }
+
+    &.md {
+        max-width: 26rem;
+    }
+
+    &.sm {
+        max-width: 20rem;
+    }
+
+    &.error {
+        border-color: $color-pomegranate;
+    }
+
+    &.error::placeholder {
+        color: $color-pomegranate;
+    }
+}
+
+.login-btn-primary {
+    background: $color-cornflower-blue;
+    border: .1rem solid $color-cornflower-blue;
+    border-radius: .5rem;
+    color: $white;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    padding-left: 1.5rem;
+    transform: skewX(-15deg);
+    -webkit-transform: perspective(15rem) rotateX(-15deg);
+    -o-transform: perspective(30rem) rotateX(-30deg);
+    -moz-transform: perspective(30rem) rotateX(-30deg);
+    -webkit-transform-origin: 0% 15%;
+    -moz-transform-origin: 0% 15%;
+    -o-transform-origin: 0% 15%;
+    transform-origin: 0% 15%;
+    text-align: left;
+    max-width: 20rem;
+    width: 100%;
+    height: 4.5rem;
+
+    &:hover,
+	&:focus {
+        background: $color-cornflower-blue;
+        border: .1rem solid $color-cornflower-blue;
+    }
+
+    &.sm {
+        max-width: 15rem;
+    }
+
+    &.disabled,
+    &[disabled] {
+        background: $color-comet-dark;
+        border: .1rem solid $color-comet-dark;
+    }
+}
+
+.f-link {
+    color: $color-mine-shaft;
+    font-family: Montserrat, sans-serif;
+    font-size: 1.6rem;
+    font-weight: 300;
+    border-bottom: .1rem solid $color-mine-shaft;
+    display: inline-block;
+    position: absolute;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.sign-link {
+    @include fontStyleFront($color-mine-shaft, 1.6rem, 600, 1);
+    display: block;
+    margin-top: 6rem;
+}
+
+.sign-link:hover {
+    text-decoration: none;
+}
+
+.logo-img {
+    max-width: 100%;
+    min-height: 5rem;
+    margin-bottom: 3.5rem;
+}
+
+
+#main-slider {
+    background: $color-cornflower-blue;
+    border-radius: .6rem;
+    padding: 1.5rem;
+    text-align: center;
+    min-height: 40rem;
+    .icon {
+        width: 5rem;
+        display: block;
+        margin: 6rem auto 4rem;
+    }
+    .item {
+        h4 {
+        	@include fontStyleFront($white, 2.2rem, 600, 1);
+        }
+        p {
+        	@include fontStyleFront($white, 1.6rem, 400, 1.5);
+        }
+    }
+
+    .carousel-indicator {
+        bottom: 0;
+    }
+    .box {
+        p {
+        max-width: 36rem;
+        margin: 0 auto;
+        width: 100%;
+        }
+    }
+}
