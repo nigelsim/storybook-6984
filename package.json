@@ -126,7 +126,7 @@
     "angulartics-hubspot": "*",
     "api-check": "7.5.5",
     "babel-polyfill": "^6.26.0",
-    "bootstrap": "3.3.7",
+    "bootstrap": "3.4.1",
     "checklist-model": "^1.0.0",
     "deepmerge": "^3.0.0",
     "enzyme": "^3.6.0",
